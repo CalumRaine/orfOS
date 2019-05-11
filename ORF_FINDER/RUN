@@ -1,0 +1,10 @@
+cp Desktop/ORF_FINDER/Program_Files/template Desktop/ORF_FINDER/Program_Files/write_to_screen.s
+cat Desktop/ORF_FINDER/DROP_HERE/$(ls -lt Desktop/ORF_FINDER/DROP_HERE/ | awk 'NR==2 {print $NF}') | while read line
+	do echo .ascii \"$line\" >> Desktop/ORF_FINDER/Program_Files/write_to_screen.s
+	echo .byte 10 >> Desktop/ORF_FINDER/Program_Files/write_to_screen.s
+done
+echo .byte 0 >> Desktop/ORF_FINDER/Program_Files/write_to_screen.s
+mv Desktop/ORF_FINDER/Program_Files/write_to_screen.s Desktop/ORF_FINDER/Program_Files/source/write_to_screen.s
+cd Desktop/ORF_FINDER/Program_Files
+make
+mv kernel.img ../
