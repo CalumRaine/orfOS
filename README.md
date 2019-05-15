@@ -34,7 +34,7 @@ Drag kernel.img onto your SD card.  The SD card must be formatted to the FAT fil
 <br />
 
 ## Disclaimer & Notes...
-- orfOS prints ORFs to a screen but you cannot save them to a USB stick or transfer them anywhere else.  This was a proof-of-concept model in assembly language.  To write a USB driver in assembly language is inhumane.  However, in theory, writing to a file instead of the screen would make this process lightning fast and would be the first development priority if I were to continue the project.  
+- orfOS prints ORFs to a screen but you cannot yet save them to a USB stick, transfer them anywhere or doing anything with them.  This was a proof-of-concept model in assembly language.  To write a USB driver in assembly language is inhumane.  However, in theory, writing to a file instead of the screen would make this process lightning fast and would be the first development priority if I were to continue the project.  
 - orfOS does not deal with introns.  It unintelligently prints anything between a start codon and a stop codon, regardless of length or content.  The proof-of-concept was designed to prove a bare metal Raspberry Pi operating system; not to prove biology.
 - orfOS is designed for use on a 1280x720 screen.  Larger screens may work but have not been tested.  All of the maths for drawing characters and creating newlines are designed around a 1280x720 format so altering the questionnaire in framebuffer.s will not alone fix this problem.  The code should be re-written with variables instead of constants.
 
