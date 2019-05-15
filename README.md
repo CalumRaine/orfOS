@@ -47,7 +47,7 @@ Drag kernel.img onto your SD card.  The SD card must be formatted to the FAT fil
     - **Minimal_Files:** The minimum files required to boot and run a Raspberry Pi.  Taken from [this repository](https://github.com/raspberrypi/firmware/tree/master/boot).  Necessary if using step 2 of the SD card installation from above. 
     - **Program_Files**
         - **Makefile:** Taken from @Chadderz121 [tutorial](https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/os/ok01.html).  Be sure to update the first line with the filepath to your own arm compiler toolchain.
-        - **build:** The folder into which the compiled object files go.
+        - **build:** The folder into which the compiled object files go.  Not there at the moment but will be automatically generated when you first execute 'RUN'.
         - **kernel.ld / kernel.map / kernel.list:** Files related to linking object files together for the final binary kernel.
         - **template:** An empty version of write_to_screen.s which is used when you click 'RUN' to load your sequence into and is subsequently moved into the 'source' directory.
         - **source**
