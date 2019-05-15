@@ -53,7 +53,7 @@ Drag kernel.img onto your SD card.  The SD card must be formatted to the FAT fil
         - **source**
             - **init.s:** The Pi initialises here.  Does nothing but branches to the main.s code.  Can probably be consolidated into a single file *(but it's doing no harm!)*
             - **main.s:** The core of orfOS.  Other functions are called from here and the main ORF-scanning happens from here.
-            - **framebuffer.s:** Requests the Raspberry Pi sets up a 1280x720 screen for us to use in memory mapped input output (MMIO).
+            - **framebuffer.s:** Requests the Raspberry Pi to set up a 1280x720 screen for use in memory mapped input output (MMIO).
             - **write_to_screen.s:** Contains all of the functions required to draw letters and scroll up etc.
 
 <br />
