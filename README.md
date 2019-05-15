@@ -49,7 +49,7 @@ Drag kernel.img onto your SD card.  The SD card must be formatted to the FAT fil
         - **Makefile:** Taken from @Chadderz121 [tutorial](https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/os/ok01.html).  Be sure to update the first line with the filepath to your own arm compiler toolchain.
         - **build:** The folder into which the compiled object files go.
         - **kernel.ld / kernel.map / kernel.list:** Files related to linking object files together for the final binary kernel.
-        - **template:** An empty version of write_to_screen.s which is used when you click 'RUN' to load your sequence into.
+        - **template:** An empty version of write_to_screen.s which is used when you click 'RUN' to load your sequence into and is subsequently moved into the 'source' directory.
         - **source**
             - **init.s:** The Pi initialises here.  Does nothing but branches to the main.s code.  Can probably be consolidated into a single file *(but it's doing no harm!)*
             - **main.s:** The core of orfOS.  Other functions are called from here and the main ORF-scanning happens from here.
