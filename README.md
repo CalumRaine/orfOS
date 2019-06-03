@@ -34,7 +34,7 @@ Drag kernel.img onto your SD card.  The SD card must be formatted to the FAT fil
 <br />
 
 ## Disclaimer & Notes...
-- orfOS prints ORFs to a screen but you cannot yet save them to a USB stick, transfer them anywhere or doing anything with them.  This was a proof-of-concept model in assembly language.  To write a USB driver in assembly language is inhumane.  However, in theory, writing to a file instead of the screen would make this process lightning fast and would be the first development priority if I were to continue the project.  
+- orfOS prints ORFs to a screen but you cannot yet save them to a USB stick, transfer them anywhere or do anything with them.  This was a proof-of-concept model in assembly language.  To write a USB driver in assembly language is inhumane.  However, in theory, writing to a file instead of the screen would make this process lightning fast and would be the first development priority if I were to continue the project.  
 - orfOS does not deal with introns.  It unintelligently prints anything between a start codon and a stop codon, regardless of length or content.  The proof-of-concept was designed to prove a bare metal Raspberry Pi operating system; not to prove biology.
 - orfOS is designed for use on a 1280x720 screen.  Larger screens may work but have not been tested.  All of the maths for drawing characters and scrolling are designed around a 1280x720 format so altering the questionnaire in framebuffer.s will not alone fix this problem.  The code should be re-written with variables instead of constants.
 
@@ -46,7 +46,7 @@ Drag kernel.img onto your SD card.  The SD card must be formatted to the FAT fil
     - **RUN:** Double click this to load your sequence into the OS, compile the kernel and go!
     - **Minimal_Files:** The minimum files required to boot and run a Raspberry Pi.  Taken from [this repository](https://github.com/raspberrypi/firmware/tree/master/boot).  Necessary if using step 2 of the SD card installation from above. 
     - **Program_Files**
-        - **Makefile:** Taken from @Chadderz121 [tutorial](https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/os/ok01.html).  Be sure to update the first line with the filepath to your own arm compiler toolchain.
+        - **Makefile:** Taken from @Chadderz121 [tutorial](https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/os/ok01.html).  Be sure to update the first line with the filepath to your own ARM compiler toolchain.
         - **build:** The folder into which the compiled object files go.  Not there at the moment but will be automatically generated when you first execute 'RUN'.
         - **kernel.ld / kernel.map / kernel.list:** Files related to linking object files together for the final binary kernel.
         - **template:** An empty version of write_to_screen.s which is used when you click 'RUN' to load your sequence into and is subsequently moved into the 'source' directory.
